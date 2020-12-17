@@ -14,14 +14,19 @@
 # end
 #puts prime?(5)
 
-def prime?(number)
-    if number < 2
-        return false
-    else
-        if (2...number).any? {|num| number % num == 0}
-            return false
-        else 
-            return true
-        end
-    end
+# def prime?(number)
+#     if number < 2
+#         return false
+#     else
+#         if (2...number).any? {|num| number % num == 0}
+#             return false
+#         else 
+#             return true
+#         end
+#     end
+# end
+
+require "prime"
+def prime?(num)
+   num.prime? ? true : false 
 end
