@@ -17,14 +17,18 @@
 def prime?(number)
     if number < 2
         return false
-    else
-        if (2...number).any? {|num| number % num == 0}
-            return false
-        else 
+    #else 
+        # if (2...number).any? {|num| number % num == 0}
+        #     return false
+    else 
+        if (2..number-1).to_a.all? {|new_num| number % new_num !=0}
             return true
+        else 
+            return false
         end
     end
 end
+
 
 # require "prime"
 # def prime?(num)
